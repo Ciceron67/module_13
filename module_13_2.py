@@ -9,11 +9,11 @@ dp = Dispatcher()
 
 @dp.message(Command('start'))
 async def start(message: Message):
-    await message.answer('Привет! Я бот помогающий твоему здоровью.')
+    print('Привет! Я бот помогающий твоему здоровью.')
 
 @dp.message()
 async def all_massages(message: Message):
-    await message.reply('Введите команду /start, чтобы начать общение.')
+    print('Введите команду /start, чтобы начать общение.')
 
 async def main():
     await dp.start_polling(bot)
